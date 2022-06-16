@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS-GRIDS</title>
+
+    <style>
+      .grid-container {
+        /*
+            grid-column-gap:1em;
+            grid-row-gap:1em;
+            */
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: auto auto;
+        background-color: #2196f3;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      
+      }
+      .grid-item > div {
+        grid-template-rows: 50% 50%;
+        display: grid;
+        grid-row: inherit;
+
+      }
+
+      .grid-item > div:nth-child(odd){
+        background-color: brown;
+        padding: 35px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+
+      .grid-item > div:nth-child(even){
+        background-color: blue;
+        padding: 35px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">
+        <div>4a</div>
+        <div>4b</div>
+        
+      </div>
+    </div>
+  </body>
+</html>
